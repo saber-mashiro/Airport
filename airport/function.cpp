@@ -41,4 +41,103 @@ void function::bookTicket()
     book.passengerinsertdata(pa);
     book.forUp(st3);
     book.updatedata(ticket);
+    qDebug()  <<"book complete";
+}
+
+void function::refundTicket()
+{
+  mysqlit refund;
+  std::string tmp;
+  std::cout<<"please enter your ID:"<<std::endl;
+  std::cin>>tmp;
+  QString id = QString::fromStdString(tmp);
+  std::cout<<"please enter the airnum to refund:"<<std::endl;
+  std::cin>>tmp;
+  QString bookair = QString::fromStdString(tmp);
+  refund.deletedatapa(id,bookair);
+  qDebug()  <<"delete complete";
+}
+
+void function::checkTicket()
+{
+  mysqlit check;
+  std::string tmp;
+  std::cout<<"please enter your ID:"<<std::endl;
+  std::cin>>tmp;
+  QString id = QString::fromStdString(tmp);
+  check.queryTablepa(id);
+}
+
+void function::showPlanes()
+{
+  mysqlit showpl;
+  showpl.queryTable("planes");
+}
+
+void function::showPassenger()
+{
+  mysqlit showpa;
+  showpa.queryTable("passenger");
+}
+
+void function::upData()
+{
+  mysqlit up;
+  std::string tmp;
+  std::cout<<"please enter the sign:"<<std::endl;
+  std::cin>>tmp;
+  QString sign = QString::fromStdString(tmp);
+  std::cout<<"please enter the value:"<<std::endl;
+  std::cin>>tmp;
+  QString value = QString::fromStdString(tmp);
+  std::cout<<"please enter the airnum:"<<std::endl;
+  std::cin>>tmp;
+  QString air = QString::fromStdString(tmp);
+  up.upDatepl(sign,value,air);
+}
+
+void function::insertPl()
+{
+  mysqlit pl;
+  general gl;
+  mysqlit book;
+  std::string tmp;
+  int persenal = 1000;
+  int rest = 1000;
+  //QTextStream cin(stdin, QIODevice::ReadOnly);
+  //QTextStream cout(stdout, QIODevice::WriteOnly);
+  std::cout<<"please enter airnum:"<<std::endl;
+  std::cin>>tmp;
+  QString arnum = QString::fromStdString(tmp);
+  gl.airnum = arnum;
+
+  std::cout<<"please enter planenum:"<<std::endl;
+  std::cin>>tmp;
+  QString plnum = QString::fromStdString(tmp);
+  gl.planenum = plnum;
+
+  std::cout<<"please enter startstation:"<<std::endl;
+  std::cin>>tmp;
+  QString ststation = QString::fromStdString(tmp);
+  gl.startstation = ststation;
+
+  std::cout<<"please enter finalstation:"<<std::endl;
+  std::cin>>tmp;
+  QString flstation = QString::fromStdString(tmp);
+  gl.finalstation = flstation;
+
+  std::cout<<"please enter day:"<<std::endl;
+  std::cin>>tmp;
+  QString days = QString::fromStdString(tmp);
+  gl.day = days;
+
+  std::cout<<"please enter people:"<<std::endl;
+  std::cin>>persenal;
+  gl.people = persenal;
+
+  std::cout<<"please enter day:"<<std::endl;
+  std::cin>>rest;
+//  QString days = QString::fromStdString(tmp);
+  gl.retickt = rest;
+  pl.planeinsertdata(gl);
 }

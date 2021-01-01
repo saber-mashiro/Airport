@@ -33,9 +33,10 @@ public:
     //void Moreinsertdata(QList<passenger> &moredb);//插入多条数据
     //删除数据
     void deletedatapl(QString str);
-    void deletedatapa(QString str);
+    void deletedatapa(QString str,QString airnum);
     //修改数据
     void updatedata(int newsen);
+    void upDatepl(QString sign,QString value,QString airnum);//admin
     //关闭数据库
     void closeDb(void);
 private:

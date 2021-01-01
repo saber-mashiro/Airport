@@ -17,12 +17,7 @@ int main(int argc, char *argv[])
     QTextStream cout(stdout, QIODevice::WriteOnly);
     function sys;
     mysqlit sql;
-    sql.OpenDb();
-    sys.bookTicket();
-    sql.queryTable("passenger");
-    sql.queryTable("planes");
-    //sql.deletedatapa("122201");
-    sql.closeDb();
+
     //w.show();
     return a.exec();
 }

@@ -54,7 +54,7 @@ void mysqlit::createTable(void)
   qDebug() << "数据库创建成功";
 }
 
-void mysqlit::queryTable(QString tablename)//输出所有飞机信息
+void mysqlit::queryTable(QString tablename)//输出所有飞机信息 admin
 {
   QSqlQuery query;
   //构建创建数据库的sql语句字符串
@@ -90,7 +90,7 @@ void mysqlit::queryTable(QString tablename)//输出所有飞机信息
   qDebug() << "数据库查询成功";
 }
 
-void mysqlit::forUp(QString airname)//输出所有飞机信息
+void mysqlit::forUp(QString airname)//输出所有飞机信息 update ticket
 {
   QSqlQuery query;
   //构建创建数据库的sql语句字符串
@@ -105,8 +105,17 @@ void mysqlit::forUp(QString airname)//输出所有飞机信息
 void mysqlit::queryTablepa(QString need)//字段匹配出对应乘客信息
 {
   QSqlQuery query;
-  QString st = QString("select ")+need+QString("from passenger");
+  QString st = QString("select * from passenger where ID = ")+need;
   query.exec(st);
+  while(query.next())
+  {
+    QString name = query.value(0).toString();
+    QString ID = query.value(1).toString();
+    QString bookair = query.value(2).toString();
+    int TICKET = query.value(3).toInt();
+    int LEVEL = query.value(4).toInt();
+    qDebug()<<QString("name:%1    id:%2    bookair:%3   ticket:%4    level:%5").arg(name).arg(ID).arg(bookair).arg(TICKET).arg(LEVEL);
+  }
 }
 
 void mysqlit::passengerinsertdata(passenger &singledb)//乘客单插
@@ -135,30 +144,6 @@ void mysqlit::planeinsertdata(general &singledb)//飞机单插
   query.exec();
 }
 
-//update
-//void mysqlit::Moreinsertdata(QList<passenger>& moredb)//乘客多插，挂了
-//{
-//    QSqlQuery query;
-//    query.prepare("insert into passenger values (?,?,?,?,?,?,?,?)");
-//    QVariantList idlist,snlist,typelist,MACAddrlsit,produceTimelist,Pieceslist,Operatorlist,OperateStatlist;
-//    for(int i=0; i< moredb.size(); i++)
-//    {
-//        typelist << moredb.at(i).name;
-//        typelist << moredb.at(i).ID;
-//        idlist << moredb.at(i).ticket;
-//        idlist << moredb.at(i).level;
-//    }
-//    query.addBindValue(idlist);
-//    query.addBindValue(MACAddrlsit);
-//    query.addBindValue(produceTimelist);
-
-//    if (!query.execBatch())
-//    {
-//        qDebug() << query.lastError();
-//    }
-//}
-
-
 void mysqlit::deletedatapl(QString str)
 {
   QSqlQuery query;
@@ -167,10 +152,10 @@ void mysqlit::deletedatapl(QString str)
   query.exec(location);
 }
 
-void mysqlit::deletedatapa(QString str)
+void mysqlit::deletedatapa(QString id,QString airnum)
 {
   QSqlQuery query;
-  QString location =  QString("delete from passenger where ID = ")+str;
+  QString location =  QString("delete from passenger where ID = ")+id+QString("and BOOKAIR = ")+airnum;
   //    query.prepare("delete from planes where ID = 1");
   query.exec(location);
 }
@@ -182,6 +167,13 @@ void mysqlit::updatedata(int newsen)
   QString s = QString::number(tmp,10);
   QString ud = QString("set retickt = ")+s;
   //    query.prepare("update planes set name = \"QT\" where id = 1");
+  query.exec(ud);
+}
+
+void mysqlit::upDatepl(QString sign,QString value,QString airnum)
+{
+  QSqlQuery query;
+  QString ud = QString("update planes set ")+sign+(" = ") + value + QString(" where AIRNUM = ")+airnum;
   query.exec(ud);
 }
 
