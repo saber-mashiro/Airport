@@ -2,6 +2,7 @@
 #define MYSQLIT_H
 #include "mainwindow.h"
 #include "general.h"
+#include <bits/stdc++.h>
 #include <QSqlDatabase>
 #include <QSqlQuery>
 #include <QSqlQueryModel>
@@ -35,7 +36,7 @@ public:
     void deletedatapl(QString str);
     void deletedatapa(QString str,QString airnum);
     //修改数据
-    void updatedata(int newsen);
+    void updatedata(int ticket,QString airnum);
     void upDatepl(QString sign,QString value,QString airnum);//admin
     //关闭数据库
     void closeDb(void);

@@ -11,13 +11,25 @@
 #include <QtSql>
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    QTextStream cin(stdin, QIODevice::ReadOnly);
-    QTextStream cout(stdout, QIODevice::WriteOnly);
-    function sys;
-    mysqlit sql;
+  QApplication a(argc, argv);
+  MainWindow w;
+  QTextStream cin(stdin, QIODevice::ReadOnly);
+  QTextStream cout(stdout, QIODevice::WriteOnly);
+  function sys;
+  mysqlit sql;
+  sql.OpenDb();
 
-    //w.show();
-    return a.exec();
+//  sys.insertPl();
+  sys.bookTicket();
+  sys.showPlanes();
+//  sys.showPlanes();
+  //sys.upData();
+//  sys.showPlanes();
+//  sys.showPassenger();
+//  sys.deletePl();
+  // sys.checkTicket();
+  //sys.refundTicket();
+  sql.closeDb();
+  //w.show();
+  return a.exec();
 }

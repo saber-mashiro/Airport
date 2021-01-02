@@ -1,7 +1,7 @@
 #ifndef GENERAL_H
 #define GENERAL_H
 #include "mainwindow.h"
-   #include <QTextStream>
+#include <QTextStream>
 struct passenger
 {
     QString name;//成员姓名

@@ -15,6 +15,7 @@ public:
     void upData();//修改某航班信息
     void showPassenger();//显示所有乘客信息
     void insertPl();//admin 插入飞机信息
+    void deletePl();
 };
 
 #endif // FUNCTION_H

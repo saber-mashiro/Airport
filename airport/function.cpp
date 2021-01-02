@@ -40,13 +40,14 @@ void function::bookTicket()
 
     book.passengerinsertdata(pa);
     book.forUp(st3);
-    book.updatedata(ticket);
+    book.updatedata(ticket,st3);
     qDebug()  <<"book complete";
 }
 
 void function::refundTicket()
 {
   mysqlit refund;
+  int ticket;
   std::string tmp;
   std::cout<<"please enter your ID:"<<std::endl;
   std::cin>>tmp;
@@ -54,7 +55,9 @@ void function::refundTicket()
   std::cout<<"please enter the airnum to refund:"<<std::endl;
   std::cin>>tmp;
   QString bookair = QString::fromStdString(tmp);
-  refund.deletedatapa(id,bookair);
+  std::cout<<"please enter the ticket to refund:"<<std::endl;
+  std::cin>>ticket;
+
   qDebug()  <<"delete complete";
 }
 
@@ -100,7 +103,6 @@ void function::insertPl()
 {
   mysqlit pl;
   general gl;
-  mysqlit book;
   std::string tmp;
   int persenal = 1000;
   int rest = 1000;
@@ -135,9 +137,19 @@ void function::insertPl()
   std::cin>>persenal;
   gl.people = persenal;
 
-  std::cout<<"please enter day:"<<std::endl;
+  std::cout<<"please enter reticket:"<<std::endl;
   std::cin>>rest;
 //  QString days = QString::fromStdString(tmp);
   gl.retickt = rest;
   pl.planeinsertdata(gl);
+}
+
+void function::deletePl()
+{
+  mysqlit dlt;
+  std::string tmp;
+  std::cout<<"please enter airnum:"<<std::endl;
+  std::cin>>tmp;
+  QString airnum = QString::fromStdString(tmp);
+  dlt.deletedatapl(airnum);
 }
