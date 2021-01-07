@@ -12,15 +12,16 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -57,10 +58,10 @@ public:
     QLabel *label_11;
     QLineEdit *levelLine2;
     QWidget *checkTicket;
-    QPlainTextEdit *plainTextEdit;
     QLabel *label_8;
     QLineEdit *idLine3;
     QPushButton *confirm_Check;
+    QTableView *checkAll;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menu_2;
@@ -187,9 +188,6 @@ public:
         tabWidget->addTab(refundTicket, QString());
         checkTicket = new QWidget();
         checkTicket->setObjectName(QString::fromUtf8("checkTicket"));
-        plainTextEdit = new QPlainTextEdit(checkTicket);
-        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
-        plainTextEdit->setGeometry(QRect(0, 70, 791, 281));
         label_8 = new QLabel(checkTicket);
         label_8->setObjectName(QString::fromUtf8("label_8"));
         label_8->setGeometry(QRect(10, 20, 76, 33));
@@ -201,6 +199,9 @@ public:
         confirm_Check = new QPushButton(checkTicket);
         confirm_Check->setObjectName(QString::fromUtf8("confirm_Check"));
         confirm_Check->setGeometry(QRect(610, 10, 121, 51));
+        checkAll = new QTableView(checkTicket);
+        checkAll->setObjectName(QString::fromUtf8("checkAll"));
+        checkAll->setGeometry(QRect(0, 70, 781, 281));
         tabWidget->addTab(checkTicket, QString());
         user->setCentralWidget(centralwidget);
         menubar = new QMenuBar(user);

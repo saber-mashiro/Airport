@@ -12,15 +12,16 @@
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
-#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -37,9 +38,9 @@ public:
     QPushButton *back_Choose;
     QTabWidget *tabWidget;
     QWidget *plMess;
-    QPlainTextEdit *plainTextEdit;
+    QTableView *plAll;
     QWidget *paMess;
-    QPlainTextEdit *plainTextEdit_2;
+    QTableView *paall;
     QWidget *plPlus_2;
     QLabel *label;
     QLabel *label_2;
@@ -115,15 +116,15 @@ public:
         tabWidget->setFont(font1);
         plMess = new QWidget();
         plMess->setObjectName(QString::fromUtf8("plMess"));
-        plainTextEdit = new QPlainTextEdit(plMess);
-        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
-        plainTextEdit->setGeometry(QRect(0, 0, 791, 361));
+        plAll = new QTableView(plMess);
+        plAll->setObjectName(QString::fromUtf8("plAll"));
+        plAll->setGeometry(QRect(0, 0, 791, 351));
         tabWidget->addTab(plMess, QString());
         paMess = new QWidget();
         paMess->setObjectName(QString::fromUtf8("paMess"));
-        plainTextEdit_2 = new QPlainTextEdit(paMess);
-        plainTextEdit_2->setObjectName(QString::fromUtf8("plainTextEdit_2"));
-        plainTextEdit_2->setGeometry(QRect(0, 0, 791, 361));
+        paall = new QTableView(paMess);
+        paall->setObjectName(QString::fromUtf8("paall"));
+        paall->setGeometry(QRect(0, 0, 791, 361));
         tabWidget->addTab(paMess, QString());
         plPlus_2 = new QWidget();
         plPlus_2->setObjectName(QString::fromUtf8("plPlus_2"));
@@ -228,7 +229,7 @@ public:
         label_10->setFont(font2);
         airnumLine3 = new QLineEdit(plDel);
         airnumLine3->setObjectName(QString::fromUtf8("airnumLine3"));
-        airnumLine3->setGeometry(QRect(340, 130, 151, 41));
+        airnumLine3->setGeometry(QRect(340, 130, 171, 41));
         airnumLine3->setClearButtonEnabled(true);
         confirm_Del = new QPushButton(plDel);
         confirm_Del->setObjectName(QString::fromUtf8("confirm_Del"));
@@ -267,7 +268,6 @@ public:
         plUpdate->setText(QCoreApplication::translate("admin", "\344\277\256\346\224\271\350\210\252\347\217\255", nullptr));
         plDelete->setText(QCoreApplication::translate("admin", "\345\210\240\351\231\244\350\210\252\347\217\255", nullptr));
         back_Choose->setText(QCoreApplication::translate("admin", "\350\277\224\345\233\236", nullptr));
-        plainTextEdit->setPlainText(QString());
         tabWidget->setTabText(tabWidget->indexOf(plMess), QCoreApplication::translate("admin", "\350\210\252\347\217\255\344\277\241\346\201\257", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(paMess), QCoreApplication::translate("admin", "\344\271\230\345\256\242\344\277\241\346\201\257", nullptr));
         label->setText(QCoreApplication::translate("admin", "\350\210\252\347\217\255\345\217\267 :", nullptr));
@@ -277,14 +277,25 @@ public:
         label_5->setText(QCoreApplication::translate("admin", "\346\230\237\346\234\237:", nullptr));
         label_6->setText(QCoreApplication::translate("admin", "\350\275\275\345\256\242\351\207\217:", nullptr));
         label_7->setText(QCoreApplication::translate("admin", "\344\275\231\347\245\250\351\207\217:", nullptr));
+        airnumLine->setPlaceholderText(QCoreApplication::translate("admin", "\350\257\267\350\276\223\345\205\245\350\210\252\347\217\255\345\217\267[AIRNUM]", nullptr));
+        planeLine->setPlaceholderText(QCoreApplication::translate("admin", "\350\257\267\350\276\223\345\205\245\351\243\236\346\234\272\347\274\226\345\217\267[PLANENUM]", nullptr));
+        startLine->setPlaceholderText(QCoreApplication::translate("admin", "\350\257\267\350\276\223\345\205\245\350\265\267\345\247\213\347\253\231[START]", nullptr));
+        finalLine->setPlaceholderText(QCoreApplication::translate("admin", "\350\257\267\350\276\223\345\205\245\347\273\210\347\202\271\347\253\231[FINAL]", nullptr));
+        dayLine->setPlaceholderText(QCoreApplication::translate("admin", "\350\257\267\350\276\223\345\205\245\346\230\237\346\234\237[DAY]", nullptr));
+        reticketLine->setPlaceholderText(QCoreApplication::translate("admin", "\350\257\267\350\276\223\345\205\245\345\211\251\344\275\231\347\245\250\351\207\217[RETICKET]", nullptr));
+        peoLine->setPlaceholderText(QCoreApplication::translate("admin", "\350\257\267\350\276\223\345\205\245\344\271\230\345\256\242\351\207\217[PEOPLE]", nullptr));
         confirm_Plus->setText(QCoreApplication::translate("admin", "\347\241\256\350\256\244", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(plPlus_2), QCoreApplication::translate("admin", "\345\242\236\345\212\240\350\210\252\347\217\255", nullptr));
         label_8->setText(QCoreApplication::translate("admin", "\344\277\256\346\224\271\351\241\271\347\233\256 :", nullptr));
         label_11->setText(QCoreApplication::translate("admin", "\345\200\274\346\224\271\344\270\272 :", nullptr));
         label_9->setText(QCoreApplication::translate("admin", "\351\234\200\344\277\256\346\224\271\350\210\252\347\217\255\345\217\267 :", nullptr));
+        idoLine->setPlaceholderText(QCoreApplication::translate("admin", "\350\257\267\350\276\223\345\205\245\351\234\200\346\224\271\351\241\271\347\233\256\345\220\215[SIGN]", nullptr));
+        valueLine->setPlaceholderText(QCoreApplication::translate("admin", "\350\257\267\350\276\223\345\205\245\345\200\274[VALUE]", nullptr));
+        airnumLine2->setPlaceholderText(QCoreApplication::translate("admin", "\350\257\267\350\276\223\345\205\245\350\210\252\347\217\255\345\217\267[AIRNUM]", nullptr));
         confirm_Up->setText(QCoreApplication::translate("admin", "\347\241\256\350\256\244", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(plUpd), QCoreApplication::translate("admin", "\344\277\256\346\224\271\350\210\252\347\217\255", nullptr));
         label_10->setText(QCoreApplication::translate("admin", "\351\234\200\345\210\240\351\231\244\350\210\252\347\217\255\345\217\267 :", nullptr));
+        airnumLine3->setPlaceholderText(QCoreApplication::translate("admin", "\350\257\267\350\276\223\345\205\245\350\210\252\347\217\255\345\217\267[AIRNUM]", nullptr));
         confirm_Del->setText(QCoreApplication::translate("admin", "\347\241\256\350\256\244", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(plDel), QCoreApplication::translate("admin", "\345\210\240\351\231\244\350\210\252\347\217\255", nullptr));
         menu->setTitle(QCoreApplication::translate("admin", "\347\263\273\347\273\237", nullptr));

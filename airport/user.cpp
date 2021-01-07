@@ -73,16 +73,13 @@ void user::Refund()
 
 void user::on_confirm_Check_clicked()
 {
-  Check();
+  QString id = ui->idLine3->text();
+  qmodel = new QSqlQueryModel();
+  QString mes =QString("select * from passenger where ID = ")+id;
+  qmodel->setQuery(mes);
+  ui->checkAll->setModel(qmodel);
   ui->idLine3->clear();
   QMessageBox::information(this, "提示", "查询成功");
-}
-
-void user::Check()
-{
-  function check;
-  QString id = ui->idLine3->text();
-  check.checkTicket(id);
 }
 
 void user::on_bookT_clicked()

@@ -4,6 +4,7 @@
 #include "function.h"
 #include <QMainWindow>
 #include <QMessageBox>
+#include<QSqlQueryModel>
 namespace Ui {
 class user;
 }
@@ -23,7 +24,6 @@ private slots:
   void on_confirm_Refund_clicked();
   void Refund();
   void on_confirm_Check_clicked();
-  void Check();
   void on_bookT_clicked();
 
   void on_refundT_clicked();
@@ -32,6 +32,7 @@ private slots:
 
 private:
   Ui::user *ui;
+  QSqlQueryModel *qmodel;
 };
 
 #endif // USER_H

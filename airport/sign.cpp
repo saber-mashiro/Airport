@@ -27,8 +27,6 @@ void sign::on_paEnter_clicked()
   pa->show();
 }
 
-
-
 void sign::on_adEnter_clicked()
 {
   this->close();

@@ -3,6 +3,7 @@
 #include "sign.h"
 #include <QMainWindow>
 #include <QMessageBox>
+#include <QSqlQueryModel>
 namespace Ui {
 class admin;
 }
@@ -24,8 +25,13 @@ private slots:
   void upDate();
   void on_confirm_Del_clicked();
   void Delete();
+  void on_plShow_clicked();
+
+  void on_paShow_clicked();
+
 private:
   Ui::admin *ui;
+  QSqlQueryModel *qmodel;
 };
 
 #endif // ADMIN_H

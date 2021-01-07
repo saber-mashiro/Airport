@@ -5,7 +5,6 @@
 #include "sign.h"
 #include "admin.h"
 #include "user.h"
-//#include <QTextCodec>
 #include <QApplication>
 #include <qdebug.h>
 #include <QSqlDatabase>
@@ -13,19 +12,13 @@
 #include <QSqlQuery>
 #include <bits/stdc++.h>
 #include <QtSql>
+//#include <QTextCodec>
 int main(int argc, char *argv[])
 {
   QApplication a(argc, argv);
   MainWindow w;
-  sign s;
-  admin ad;
-  user us;
-//  QTextCodec *codec = QTextCodec::codecForName("UTF-8");
-//  QTextCodec::setCodecForLocale(codec);
-  function sys;
   mysqlit sql;
-//  sql.OpenDb();
-//  sql.closeDb();
+  sql.OpenDb();
   w.show();
   return a.exec();
 }

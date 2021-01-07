@@ -149,17 +149,14 @@
      <attribute name="title">
       <string>航班信息</string>
      </attribute>
-     <widget class="QPlainTextEdit" name="plainTextEdit">
+     <widget class="QTableView" name="plAll">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>0</y>
         <width>791</width>
-        <height>361</height>
+        <height>351</height>
        </rect>
-      </property>
-      <property name="plainText">
-       <string/>
       </property>
      </widget>
     </widget>
@@ -167,7 +164,7 @@
      <attribute name="title">
       <string>乘客信息</string>
      </attribute>
-     <widget class="QPlainTextEdit" name="plainTextEdit_2">
+     <widget class="QTableView" name="paall">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -324,6 +321,9 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入航班号[AIRNUM]</string>
+      </property>
       <property name="clearButtonEnabled">
        <bool>true</bool>
       </property>
@@ -336,6 +336,9 @@
         <width>211</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="placeholderText">
+       <string>请输入飞机编号[PLANENUM]</string>
       </property>
       <property name="clearButtonEnabled">
        <bool>true</bool>
@@ -350,6 +353,9 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入起始站[START]</string>
+      </property>
       <property name="clearButtonEnabled">
        <bool>true</bool>
       </property>
@@ -362,6 +368,9 @@
         <width>211</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="placeholderText">
+       <string>请输入终点站[FINAL]</string>
       </property>
       <property name="clearButtonEnabled">
        <bool>true</bool>
@@ -376,6 +385,9 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入星期[DAY]</string>
+      </property>
       <property name="clearButtonEnabled">
        <bool>true</bool>
       </property>
@@ -389,6 +401,9 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入剩余票量[RETICKET]</string>
+      </property>
       <property name="clearButtonEnabled">
        <bool>true</bool>
       </property>
@@ -401,6 +416,9 @@
         <width>211</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="placeholderText">
+       <string>请输入乘客量[PEOPLE]</string>
       </property>
       <property name="clearButtonEnabled">
        <bool>true</bool>
@@ -490,6 +508,9 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入需改项目名[SIGN]</string>
+      </property>
       <property name="clearButtonEnabled">
        <bool>true</bool>
       </property>
@@ -503,6 +524,9 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入值[VALUE]</string>
+      </property>
       <property name="clearButtonEnabled">
        <bool>true</bool>
       </property>
@@ -515,6 +539,9 @@
         <width>261</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="placeholderText">
+       <string>请输入航班号[AIRNUM]</string>
       </property>
       <property name="clearButtonEnabled">
        <bool>true</bool>
@@ -562,9 +589,12 @@
        <rect>
         <x>340</x>
         <y>130</y>
-        <width>151</width>
+        <width>171</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="placeholderText">
+       <string>请输入航班号[AIRNUM]</string>
       </property>
       <property name="clearButtonEnabled">
        <bool>true</bool>

@@ -79,3 +79,17 @@ void admin::Delete()
   QString airnum = ui->airnumLine3->text();
   del.deletePl(airnum);
 }
+
+void admin::on_plShow_clicked()
+{
+  qmodel = new QSqlQueryModel();
+  qmodel->setQuery("select * from planes");
+  ui->plAll->setModel(qmodel);
+}
+
+void admin::on_paShow_clicked()
+{
+  qmodel = new QSqlQueryModel();
+  qmodel->setQuery("select * from passenger");
+  ui->paall->setModel(qmodel);
+}

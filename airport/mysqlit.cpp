@@ -257,4 +257,5 @@ void mysqlit::upDatepl(QString sign,QString value,QString airnum)
 void mysqlit::closeDb(void)
 {
   db.close();
+  qDebug()<<"数据库关闭";
 }

@@ -38,6 +38,8 @@ void MainWindow::on_enterSys_clicked()
 
 void MainWindow::on_exitsys_clicked()
 {
+  mysqlit sq;
   QApplication* ex = nullptr;
   ex->quit();
+  sq.closeDb();
 }
