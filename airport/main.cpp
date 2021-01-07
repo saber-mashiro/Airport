@@ -20,8 +20,6 @@ int main(int argc, char *argv[])
   sign s;
   admin ad;
   user us;
-  QTextStream cin(stdin, QIODevice::ReadOnly);
-  QTextStream cout(stdout, QIODevice::WriteOnly);
 //  QTextCodec *codec = QTextCodec::codecForName("UTF-8");
 //  QTextCodec::setCodecForLocale(codec);
   function sys;

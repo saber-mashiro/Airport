@@ -107,7 +107,7 @@
     <property name="currentIndex">
      <number>0</number>
     </property>
-    <widget class="QWidget" name="tab_3">
+    <widget class="QWidget" name="bookTicket">
      <attribute name="title">
       <string>订票</string>
      </attribute>
@@ -206,7 +206,7 @@
        <string>票等级:</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_5">
+     <widget class="QLineEdit" name="nameLine">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -215,8 +215,14 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入姓名[NAME]</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_6">
+     <widget class="QLineEdit" name="idLine">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -225,8 +231,14 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入身份ID[ID]</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_7">
+     <widget class="QLineEdit" name="airnumLine">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -235,8 +247,14 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入航班号[AIRNUM]</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_8">
+     <widget class="QLineEdit" name="ticketLine">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -245,8 +263,14 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入订票量[TICKETNUM]</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_9">
+     <widget class="QLineEdit" name="levelLine">
       <property name="geometry">
        <rect>
         <x>320</x>
@@ -255,8 +279,14 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入订票等级[level]</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_7">
+     <widget class="QPushButton" name="confirm_Book">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -269,18 +299,8 @@
        <string>确认</string>
       </property>
      </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit_3">
-      <property name="geometry">
-       <rect>
-        <x>630</x>
-        <y>220</y>
-        <width>141</width>
-        <height>51</height>
-       </rect>
-      </property>
-     </widget>
     </widget>
-    <widget class="QWidget" name="tab_4">
+    <widget class="QWidget" name="refundTicket">
      <attribute name="title">
       <string>退票</string>
      </attribute>
@@ -303,7 +323,7 @@
        <string>退票量 :</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="idLine2">
       <property name="geometry">
        <rect>
         <x>280</x>
@@ -312,8 +332,14 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入身份ID[ID]</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="airnumLine2">
       <property name="geometry">
        <rect>
         <x>280</x>
@@ -322,8 +348,14 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入航班号[AIRNUM]</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_4">
+     <widget class="QLineEdit" name="ticketLine2">
       <property name="geometry">
        <rect>
         <x>280</x>
@@ -332,8 +364,14 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入退票量[TICKETNUM]</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_8">
+     <widget class="QPushButton" name="confirm_Refund">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -403,7 +441,7 @@
        <string>退票等级 :</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_10">
+     <widget class="QLineEdit" name="levelLine2">
       <property name="geometry">
        <rect>
         <x>280</x>
@@ -412,19 +450,15 @@
         <height>41</height>
        </rect>
       </property>
-     </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit_4">
-      <property name="geometry">
-       <rect>
-        <x>630</x>
-        <y>220</y>
-        <width>141</width>
-        <height>51</height>
-       </rect>
+      <property name="placeholderText">
+       <string>请输入退票等级[level]</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="checkTicket">
      <attribute name="title">
       <string>查询显示</string>
      </attribute>
@@ -457,7 +491,7 @@
        <string>ID :</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_11">
+     <widget class="QLineEdit" name="idLine3">
       <property name="geometry">
        <rect>
         <x>50</x>
@@ -466,8 +500,14 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="placeholderText">
+       <string>请输入身份ID[ID]</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_9">
+     <widget class="QPushButton" name="confirm_Check">
       <property name="geometry">
        <rect>
         <x>610</x>

@@ -143,9 +143,9 @@
      </font>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
-    <widget class="QWidget" name="tab">
+    <widget class="QWidget" name="plMess">
      <attribute name="title">
       <string>航班信息</string>
      </attribute>
@@ -163,7 +163,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_2">
+    <widget class="QWidget" name="paMess">
      <attribute name="title">
       <string>乘客信息</string>
      </attribute>
@@ -178,7 +178,7 @@
       </property>
      </widget>
     </widget>
-    <widget class="QWidget" name="tab_3">
+    <widget class="QWidget" name="plPlus_2">
      <attribute name="title">
       <string>增加航班</string>
      </attribute>
@@ -315,7 +315,7 @@
        <string>余票量:</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_5">
+     <widget class="QLineEdit" name="airnumLine">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -324,8 +324,11 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_6">
+     <widget class="QLineEdit" name="planeLine">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -334,8 +337,11 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_7">
+     <widget class="QLineEdit" name="startLine">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -344,8 +350,11 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_8">
+     <widget class="QLineEdit" name="finalLine">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -354,8 +363,11 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_9">
+     <widget class="QLineEdit" name="dayLine">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -364,8 +376,11 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_10">
+     <widget class="QLineEdit" name="reticketLine">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -374,8 +389,11 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_11">
+     <widget class="QLineEdit" name="peoLine">
       <property name="geometry">
        <rect>
         <x>250</x>
@@ -384,8 +402,11 @@
         <height>21</height>
        </rect>
       </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_7">
+     <widget class="QPushButton" name="confirm_Plus">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -398,18 +419,8 @@
        <string>确认</string>
       </property>
      </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit_3">
-      <property name="geometry">
-       <rect>
-        <x>630</x>
-        <y>210</y>
-        <width>141</width>
-        <height>51</height>
-       </rect>
-      </property>
-     </widget>
     </widget>
-    <widget class="QWidget" name="tab_4">
+    <widget class="QWidget" name="plUpd">
      <attribute name="title">
       <string>修改航班</string>
      </attribute>
@@ -432,7 +443,7 @@
        <string>修改项目 :</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_9">
+     <widget class="QLabel" name="label_11">
       <property name="geometry">
        <rect>
         <x>150</x>
@@ -451,7 +462,7 @@
        <string>值改为 :</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_10">
+     <widget class="QLabel" name="label_9">
       <property name="geometry">
        <rect>
         <x>150</x>
@@ -470,7 +481,7 @@
        <string>需修改航班号 :</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_2">
+     <widget class="QLineEdit" name="idoLine">
       <property name="geometry">
        <rect>
         <x>280</x>
@@ -479,8 +490,11 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_3">
+     <widget class="QLineEdit" name="valueLine">
       <property name="geometry">
        <rect>
         <x>280</x>
@@ -489,8 +503,11 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit_4">
+     <widget class="QLineEdit" name="airnumLine2">
       <property name="geometry">
        <rect>
         <x>280</x>
@@ -499,8 +516,11 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_8">
+     <widget class="QPushButton" name="confirm_Up">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -513,22 +533,12 @@
        <string>确认</string>
       </property>
      </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit_4">
-      <property name="geometry">
-       <rect>
-        <x>630</x>
-        <y>220</y>
-        <width>141</width>
-        <height>51</height>
-       </rect>
-      </property>
-     </widget>
     </widget>
-    <widget class="QWidget" name="tab_5">
+    <widget class="QWidget" name="plDel">
      <attribute name="title">
       <string>删除航班</string>
      </attribute>
-     <widget class="QLabel" name="label_11">
+     <widget class="QLabel" name="label_10">
       <property name="geometry">
        <rect>
         <x>220</x>
@@ -547,7 +557,7 @@
        <string>需删除航班号 :</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="lineEdit">
+     <widget class="QLineEdit" name="airnumLine3">
       <property name="geometry">
        <rect>
         <x>340</x>
@@ -556,8 +566,11 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_9">
+     <widget class="QPushButton" name="confirm_Del">
       <property name="geometry">
        <rect>
         <x>640</x>
@@ -568,16 +581,6 @@
       </property>
       <property name="text">
        <string>确认</string>
-      </property>
-     </widget>
-     <widget class="QPlainTextEdit" name="plainTextEdit_5">
-      <property name="geometry">
-       <rect>
-        <x>630</x>
-        <y>220</y>
-        <width>141</width>
-        <height>51</height>
-       </rect>
       </property>
      </widget>
     </widget>
