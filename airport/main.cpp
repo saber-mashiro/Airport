@@ -4,6 +4,7 @@
 #include "function.h"
 #include "sign.h"
 #include "admin.h"
+#include "user.h"
 //#include <QTextCodec>
 #include <QApplication>
 #include <qdebug.h>
@@ -18,6 +19,7 @@ int main(int argc, char *argv[])
   MainWindow w;
   sign s;
   admin ad;
+  user us;
   QTextStream cin(stdin, QIODevice::ReadOnly);
   QTextStream cout(stdout, QIODevice::WriteOnly);
 //  QTextCodec *codec = QTextCodec::codecForName("UTF-8");
@@ -26,8 +28,9 @@ int main(int argc, char *argv[])
   mysqlit sql;
 //  sql.OpenDb();
 //  sql.closeDb();
-  w.show();
-  s.show();
   ad.show();
+  us.show();
+  s.show();
+  w.show();
   return a.exec();
 }

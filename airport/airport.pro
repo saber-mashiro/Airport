@@ -12,7 +12,8 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     mysqlit.cpp \
-    sign.cpp
+    sign.cpp \
+    user.cpp
 
 HEADERS += \
     admin.h \
@@ -20,12 +21,14 @@ HEADERS += \
     general.h \
     mainwindow.h \
     mysqlit.h \
-    sign.h
+    sign.h \
+    user.h
 
 FORMS += \
     admin.ui \
     mainwindow.ui \
-    sign.ui
+    sign.ui \
+    user.ui
 
 TRANSLATIONS += \
     airport_zh_CN.ts
