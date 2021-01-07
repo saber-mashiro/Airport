@@ -25,6 +25,7 @@ public:
     //查询和显示结果
     void queryTable(QString tablename);
     void forUp(QString airname);
+    int forUppa(QString id,QString airname,int level);
     void queryTablepa(QString need);
     //判断数据表是否存在
     bool IsTaBexists(QString& Tabname);
@@ -37,6 +38,9 @@ public:
     void deletedatapa(QString str,QString airnum);
     //修改数据
     void updatedata(int ticket,QString airnum);
+    void updatedataplus(int ticket,QString airnum);
+    void upPa(int ticket,QString airnum,QString id,int level);
+    void upPaplus(int ticket,QString airnum,QString id,int level);
     void upDatepl(QString sign,QString value,QString airnum);//admin
     //关闭数据库
     void closeDb(void);

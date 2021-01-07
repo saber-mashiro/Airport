@@ -1,5 +1,6 @@
 #include "mysqlit.h"
 int ticketransfer;
+int refundticket;
 mysqlit::mysqlit()
 {
   QSqlDatabase database;
@@ -99,7 +100,22 @@ void mysqlit::forUp(QString airname)//update ticket
   query.exec();
   query.next();
   ticketransfer = query.value(0).toInt();
-  std::cout<<ticketransfer<<std::endl;
+//  std::cout<<ticketransfer<<std::endl;
+}
+
+int mysqlit::forUppa(QString id,QString airname,int level)//update ticket
+{
+  QSqlQuery query;
+  //构建创建数据库的sql语句字符串
+  query.prepare("select TICKETNUM from passenger where AIRNUM = :AIRNUM and ID =:ID and level = :level");
+  query.bindValue(":AIRNUM",airname);
+  query.bindValue(":ID",id);
+  query.bindValue(":level",level);
+  query.exec();
+  query.next();
+  refundticket = query.value(0).toInt();
+//  std::cout<<ticketransfer<<std::endl;
+  return refundticket;
 }
 
 void mysqlit::queryTablepa(QString need)//查询某个乘客信息
@@ -171,6 +187,39 @@ void mysqlit::updatedata(int ticket,QString airnum)//更新飞机数据加法
   query.prepare("update planes set RETICKET = :RETICKET where AIRNUM = :AIRNUM");
   query.bindValue(":RETICKET",reticket);
   query.bindValue(":AIRNUM",airnum);
+  query.exec();
+}
+
+void mysqlit::updatedataplus(int ticket,QString airnum)//更新飞机数据加法
+{
+  QSqlQuery query;
+  int reticket = ticketransfer + ticket;
+  query.prepare("update planes set RETICKET = :RETICKET where AIRNUM = :AIRNUM");
+  query.bindValue(":RETICKET",reticket);
+  query.bindValue(":AIRNUM",airnum);
+  query.exec();
+}
+
+void mysqlit::upPa(int ticket,QString airnum,QString id,int level)
+{
+  QSqlQuery query;
+  int reticket = refundticket - ticket;
+  query.prepare("update passenger set TICKETNUM = :TICKETNUM where AIRNUM = :AIRNUM and ID = :ID and level = :level");
+  query.bindValue(":TICKETNUM",reticket);
+  query.bindValue(":AIRNUM",airnum);
+  query.bindValue(":ID",id);
+  query.bindValue(":level",level);
+  query.exec();
+}
+void mysqlit::upPaplus(int ticket,QString airnum,QString id,int level)
+{
+  QSqlQuery query;
+  int reticket = refundticket + ticket;
+  query.prepare("update passenger set TICKETNUM = :TICKETNUM where AIRNUM = :AIRNUM and ID = :ID and level = :level");
+  query.bindValue(":TICKETNUM",reticket);
+  query.bindValue(":AIRNUM",airnum);
+  query.bindValue(":ID",id);
+  query.bindValue(":level",level);
   query.exec();
 }
 

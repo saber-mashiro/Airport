@@ -37,17 +37,23 @@ void function::bookTicket()
     std::cout<<"please enter the level of plane:"<<std::endl;
     std::cin>>level;
     pa.level = level;
-
-    book.passengerinsertdata(pa);
+    int cmp = 0;
+    cmp = book.forUppa(st2,st3,level);
+    if(cmp == 0)
+    {book.passengerinsertdata(pa);}
+    else
+    {
+      book.upPaplus(ticket,st3,st2,level);
+    }
     book.forUp(st3);
     book.updatedata(ticket,st3);
     qDebug()  <<"book complete";
 }
 
-void function::refundTicket()
+void function::refundTicket()//退票做同步
 {
   mysqlit refund;
-  int ticket;
+  int ticket,level;
   std::string tmp;
   std::cout<<"please enter your ID:"<<std::endl;
   std::cin>>tmp;
@@ -57,7 +63,16 @@ void function::refundTicket()
   QString bookair = QString::fromStdString(tmp);
   std::cout<<"please enter the ticket to refund:"<<std::endl;
   std::cin>>ticket;
-
+  std::cout<<"please enter the ticket level to refund:"<<std::endl;
+  std::cin>>level;
+  int cmp = refund.forUppa(id,bookair,level);
+  refund.upPa(ticket,bookair,id,level);
+  if(cmp == ticket)
+  {
+    refund.deletedatapa(id,bookair);
+  }
+  refund.forUp(bookair);
+  refund.updatedataplus(ticket,bookair);
   qDebug()  <<"delete complete";
 }
 
@@ -144,7 +159,7 @@ void function::insertPl()
   pl.planeinsertdata(gl);
 }
 
-void function::deletePl()
+void function::deletePl()//航班删除做同步
 {
   mysqlit dlt;
   std::string tmp;

@@ -2,6 +2,9 @@
 #include "general.h"
 #include "mysqlit.h"
 #include "function.h"
+#include "sign.h"
+#include "admin.h"
+//#include <QTextCodec>
 #include <QApplication>
 #include <qdebug.h>
 #include <QSqlDatabase>
@@ -13,23 +16,18 @@ int main(int argc, char *argv[])
 {
   QApplication a(argc, argv);
   MainWindow w;
+  sign s;
+  admin ad;
   QTextStream cin(stdin, QIODevice::ReadOnly);
   QTextStream cout(stdout, QIODevice::WriteOnly);
+//  QTextCodec *codec = QTextCodec::codecForName("UTF-8");
+//  QTextCodec::setCodecForLocale(codec);
   function sys;
   mysqlit sql;
-  sql.OpenDb();
-
-//  sys.insertPl();
-  sys.bookTicket();
-  sys.showPlanes();
-//  sys.showPlanes();
-  //sys.upData();
-//  sys.showPlanes();
-//  sys.showPassenger();
-//  sys.deletePl();
-  // sys.checkTicket();
-  //sys.refundTicket();
-  sql.closeDb();
-  //w.show();
+//  sql.OpenDb();
+//  sql.closeDb();
+  w.show();
+  s.show();
+  ad.show();
   return a.exec();
 }

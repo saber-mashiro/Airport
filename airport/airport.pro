@@ -1,5 +1,4 @@
 QT       += core gui sql quick
-#QT       += sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++11 console
 # You can make your code fail to compile if it uses deprecated APIs.
@@ -7,20 +6,26 @@ CONFIG += c++11 console
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    admin.cpp \
     function.cpp \
     general.cpp \
     main.cpp \
     mainwindow.cpp \
-    mysqlit.cpp
+    mysqlit.cpp \
+    sign.cpp
 
 HEADERS += \
+    admin.h \
     function.h \
     general.h \
     mainwindow.h \
-    mysqlit.h
+    mysqlit.h \
+    sign.h
 
 FORMS += \
-    mainwindow.ui
+    admin.ui \
+    mainwindow.ui \
+    sign.ui
 
 TRANSLATIONS += \
     airport_zh_CN.ts

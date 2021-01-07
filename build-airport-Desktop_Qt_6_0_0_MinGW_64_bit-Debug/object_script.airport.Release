@@ -1,0 +1,10 @@
+release/admin.o
+release/function.o
+release/general.o
+release/main.o
+release/mainwindow.o
+release/mysqlit.o
+release/sign.o
+release/moc_admin.o
+release/moc_mainwindow.o
+release/moc_sign.o
