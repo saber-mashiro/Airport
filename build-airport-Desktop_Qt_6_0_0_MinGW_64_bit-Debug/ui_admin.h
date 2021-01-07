@@ -29,12 +29,12 @@ class Ui_admin
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton_6;
+    QPushButton *plShow;
+    QPushButton *paShow;
+    QPushButton *plPlus;
+    QPushButton *plUpdate;
+    QPushButton *plDelete;
+    QPushButton *back_Choose;
     QTabWidget *tabWidget;
     QWidget *tab;
     QPlainTextEdit *plainTextEdit;
@@ -56,6 +56,7 @@ public:
     QLineEdit *lineEdit_10;
     QLineEdit *lineEdit_11;
     QPushButton *pushButton_7;
+    QPlainTextEdit *plainTextEdit_3;
     QWidget *tab_4;
     QLabel *label_8;
     QLabel *label_9;
@@ -64,10 +65,12 @@ public:
     QLineEdit *lineEdit_3;
     QLineEdit *lineEdit_4;
     QPushButton *pushButton_8;
+    QPlainTextEdit *plainTextEdit_4;
     QWidget *tab_5;
     QLabel *label_11;
     QLineEdit *lineEdit;
     QPushButton *pushButton_9;
+    QPlainTextEdit *plainTextEdit_5;
     QMenuBar *menubar;
     QMenu *menu;
     QMenu *menu_2;
@@ -80,33 +83,33 @@ public:
         admin->resize(800, 600);
         centralwidget = new QWidget(admin);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(0, 0, 151, 111));
+        plShow = new QPushButton(centralwidget);
+        plShow->setObjectName(QString::fromUtf8("plShow"));
+        plShow->setGeometry(QRect(0, 0, 151, 111));
         QFont font;
         font.setFamily(QString::fromUtf8("\346\226\271\346\255\243\345\255\227\350\277\271-\345\205\260\346\242\223\350\223\221\347\254\240\347\277\201\344\275\223 \347\256\200"));
         font.setPointSize(16);
-        pushButton->setFont(font);
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(160, 0, 151, 111));
-        pushButton_2->setFont(font);
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(320, 0, 151, 111));
-        pushButton_3->setFont(font);
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(480, 0, 151, 111));
-        pushButton_4->setFont(font);
-        pushButton_5 = new QPushButton(centralwidget);
-        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
-        pushButton_5->setGeometry(QRect(640, 0, 151, 111));
-        pushButton_5->setFont(font);
-        pushButton_6 = new QPushButton(centralwidget);
-        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
-        pushButton_6->setGeometry(QRect(0, 120, 791, 31));
-        pushButton_6->setFont(font);
+        plShow->setFont(font);
+        paShow = new QPushButton(centralwidget);
+        paShow->setObjectName(QString::fromUtf8("paShow"));
+        paShow->setGeometry(QRect(160, 0, 151, 111));
+        paShow->setFont(font);
+        plPlus = new QPushButton(centralwidget);
+        plPlus->setObjectName(QString::fromUtf8("plPlus"));
+        plPlus->setGeometry(QRect(320, 0, 151, 111));
+        plPlus->setFont(font);
+        plUpdate = new QPushButton(centralwidget);
+        plUpdate->setObjectName(QString::fromUtf8("plUpdate"));
+        plUpdate->setGeometry(QRect(480, 0, 151, 111));
+        plUpdate->setFont(font);
+        plDelete = new QPushButton(centralwidget);
+        plDelete->setObjectName(QString::fromUtf8("plDelete"));
+        plDelete->setGeometry(QRect(640, 0, 151, 111));
+        plDelete->setFont(font);
+        back_Choose = new QPushButton(centralwidget);
+        back_Choose->setObjectName(QString::fromUtf8("back_Choose"));
+        back_Choose->setGeometry(QRect(0, 120, 791, 31));
+        back_Choose->setFont(font);
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setGeometry(QRect(0, 160, 791, 381));
@@ -182,6 +185,9 @@ public:
         pushButton_7 = new QPushButton(tab_3);
         pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
         pushButton_7->setGeometry(QRect(640, 280, 121, 51));
+        plainTextEdit_3 = new QPlainTextEdit(tab_3);
+        plainTextEdit_3->setObjectName(QString::fromUtf8("plainTextEdit_3"));
+        plainTextEdit_3->setGeometry(QRect(630, 210, 141, 51));
         tabWidget->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName(QString::fromUtf8("tab_4"));
@@ -209,6 +215,9 @@ public:
         pushButton_8 = new QPushButton(tab_4);
         pushButton_8->setObjectName(QString::fromUtf8("pushButton_8"));
         pushButton_8->setGeometry(QRect(640, 280, 121, 51));
+        plainTextEdit_4 = new QPlainTextEdit(tab_4);
+        plainTextEdit_4->setObjectName(QString::fromUtf8("plainTextEdit_4"));
+        plainTextEdit_4->setGeometry(QRect(630, 220, 141, 51));
         tabWidget->addTab(tab_4, QString());
         tab_5 = new QWidget();
         tab_5->setObjectName(QString::fromUtf8("tab_5"));
@@ -222,6 +231,9 @@ public:
         pushButton_9 = new QPushButton(tab_5);
         pushButton_9->setObjectName(QString::fromUtf8("pushButton_9"));
         pushButton_9->setGeometry(QRect(640, 280, 121, 51));
+        plainTextEdit_5 = new QPlainTextEdit(tab_5);
+        plainTextEdit_5->setObjectName(QString::fromUtf8("plainTextEdit_5"));
+        plainTextEdit_5->setGeometry(QRect(630, 220, 141, 51));
         tabWidget->addTab(tab_5, QString());
         admin->setCentralWidget(centralwidget);
         menubar = new QMenuBar(admin);
@@ -241,7 +253,7 @@ public:
 
         retranslateUi(admin);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(admin);
@@ -250,12 +262,12 @@ public:
     void retranslateUi(QMainWindow *admin)
     {
         admin->setWindowTitle(QCoreApplication::translate("admin", "\351\243\236\346\234\272\347\245\250\347\256\241\347\220\206\347\263\273\347\273\237", nullptr));
-        pushButton->setText(QCoreApplication::translate("admin", "\350\210\252\347\217\255\344\277\241\346\201\257", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("admin", "\344\271\230\345\256\242\344\277\241\346\201\257", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("admin", "\345\242\236\345\212\240\350\210\252\347\217\255", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("admin", "\344\277\256\346\224\271\350\210\252\347\217\255", nullptr));
-        pushButton_5->setText(QCoreApplication::translate("admin", "\345\210\240\351\231\244\350\210\252\347\217\255", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("admin", "\350\277\224\345\233\236", nullptr));
+        plShow->setText(QCoreApplication::translate("admin", "\350\210\252\347\217\255\344\277\241\346\201\257", nullptr));
+        paShow->setText(QCoreApplication::translate("admin", "\344\271\230\345\256\242\344\277\241\346\201\257", nullptr));
+        plPlus->setText(QCoreApplication::translate("admin", "\345\242\236\345\212\240\350\210\252\347\217\255", nullptr));
+        plUpdate->setText(QCoreApplication::translate("admin", "\344\277\256\346\224\271\350\210\252\347\217\255", nullptr));
+        plDelete->setText(QCoreApplication::translate("admin", "\345\210\240\351\231\244\350\210\252\347\217\255", nullptr));
+        back_Choose->setText(QCoreApplication::translate("admin", "\350\277\224\345\233\236", nullptr));
         plainTextEdit->setPlainText(QString());
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("admin", "\350\210\252\347\217\255\344\277\241\346\201\257", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("admin", "\344\271\230\345\256\242\344\277\241\346\201\257", nullptr));

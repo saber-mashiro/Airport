@@ -12,3 +12,10 @@ user::~user()
 {
   delete ui;
 }
+
+void user::on_backChoose_clicked()
+{
+  this->close();
+  sign *ba = new sign();
+  ba->show();
+}

@@ -1,6 +1,6 @@
 #ifndef USER_H
 #define USER_H
-
+#include "sign.h"
 #include <QMainWindow>
 
 namespace Ui {
@@ -14,6 +14,9 @@ class user : public QMainWindow
 public:
   explicit user(QWidget *parent = nullptr);
   ~user();
+
+private slots:
+  void on_backChoose_clicked();
 
 private:
   Ui::user *ui;

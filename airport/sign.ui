@@ -14,7 +14,7 @@
    <string>飞机票管理系统</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="paEnter">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -33,7 +33,7 @@
      <string>乘客登录</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="adEnter">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -50,6 +50,25 @@
     </property>
     <property name="text">
      <string>管理员登录</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backMain">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>510</y>
+      <width>791</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>方正字迹-兰梓蓑笠翁体 简</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>返回</string>
     </property>
    </widget>
   </widget>

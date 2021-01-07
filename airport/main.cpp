@@ -28,9 +28,6 @@ int main(int argc, char *argv[])
   mysqlit sql;
 //  sql.OpenDb();
 //  sql.closeDb();
-  ad.show();
-  us.show();
-  s.show();
   w.show();
   return a.exec();
 }

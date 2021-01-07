@@ -17,7 +17,7 @@
    <enum>Qt::ToolButtonFollowStyle</enum>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="enterSys">
     <property name="geometry">
      <rect>
       <x>300</x>
@@ -67,7 +67,7 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="exitsys">
     <property name="geometry">
      <rect>
       <x>300</x>

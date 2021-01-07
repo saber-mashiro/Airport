@@ -14,7 +14,7 @@
    <string>飞机票管理系统</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="plShow">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -33,7 +33,7 @@
      <string>航班信息</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="paShow">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -52,7 +52,7 @@
      <string>乘客信息</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="plPlus">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -71,7 +71,7 @@
      <string>增加航班</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="plUpdate">
     <property name="geometry">
      <rect>
       <x>480</x>
@@ -90,7 +90,7 @@
      <string>修改航班</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="plDelete">
     <property name="geometry">
      <rect>
       <x>640</x>
@@ -109,7 +109,7 @@
      <string>删除航班</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="back_Choose">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -143,7 +143,7 @@
      </font>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -398,6 +398,16 @@
        <string>确认</string>
       </property>
      </widget>
+     <widget class="QPlainTextEdit" name="plainTextEdit_3">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>210</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -503,6 +513,16 @@
        <string>确认</string>
       </property>
      </widget>
+     <widget class="QPlainTextEdit" name="plainTextEdit_4">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>220</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_5">
      <attribute name="title">
@@ -548,6 +568,16 @@
       </property>
       <property name="text">
        <string>确认</string>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="plainTextEdit_5">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>220</y>
+        <width>141</width>
+        <height>51</height>
+       </rect>
       </property>
      </widget>
     </widget>

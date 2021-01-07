@@ -29,10 +29,10 @@ class Ui_user
 {
 public:
     QWidget *centralwidget;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_6;
+    QPushButton *bookT;
+    QPushButton *refundT;
+    QPushButton *checkT;
+    QPushButton *backChoose;
     QTabWidget *tabWidget;
     QWidget *tab_3;
     QLabel *label;
@@ -46,6 +46,7 @@ public:
     QLineEdit *lineEdit_8;
     QLineEdit *lineEdit_9;
     QPushButton *pushButton_7;
+    QPlainTextEdit *plainTextEdit_3;
     QWidget *tab_4;
     QLabel *label_10;
     QLineEdit *lineEdit_2;
@@ -56,6 +57,7 @@ public:
     QLabel *label_7;
     QLabel *label_11;
     QLineEdit *lineEdit_10;
+    QPlainTextEdit *plainTextEdit_4;
     QWidget *tab;
     QPlainTextEdit *plainTextEdit;
     QLabel *label_8;
@@ -73,25 +75,25 @@ public:
         user->resize(800, 600);
         centralwidget = new QWidget(user);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-        pushButton->setGeometry(QRect(0, 0, 151, 111));
+        bookT = new QPushButton(centralwidget);
+        bookT->setObjectName(QString::fromUtf8("bookT"));
+        bookT->setGeometry(QRect(0, 0, 151, 111));
         QFont font;
         font.setFamily(QString::fromUtf8("\346\226\271\346\255\243\345\255\227\350\277\271-\345\205\260\346\242\223\350\223\221\347\254\240\347\277\201\344\275\223 \347\256\200"));
         font.setPointSize(16);
-        pushButton->setFont(font);
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(320, 0, 151, 111));
-        pushButton_2->setFont(font);
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(640, 0, 151, 111));
-        pushButton_3->setFont(font);
-        pushButton_6 = new QPushButton(centralwidget);
-        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
-        pushButton_6->setGeometry(QRect(0, 120, 791, 31));
-        pushButton_6->setFont(font);
+        bookT->setFont(font);
+        refundT = new QPushButton(centralwidget);
+        refundT->setObjectName(QString::fromUtf8("refundT"));
+        refundT->setGeometry(QRect(320, 0, 151, 111));
+        refundT->setFont(font);
+        checkT = new QPushButton(centralwidget);
+        checkT->setObjectName(QString::fromUtf8("checkT"));
+        checkT->setGeometry(QRect(640, 0, 151, 111));
+        checkT->setFont(font);
+        backChoose = new QPushButton(centralwidget);
+        backChoose->setObjectName(QString::fromUtf8("backChoose"));
+        backChoose->setGeometry(QRect(0, 120, 791, 31));
+        backChoose->setFont(font);
         tabWidget = new QTabWidget(centralwidget);
         tabWidget->setObjectName(QString::fromUtf8("tabWidget"));
         tabWidget->setGeometry(QRect(0, 160, 791, 381));
@@ -141,6 +143,9 @@ public:
         pushButton_7 = new QPushButton(tab_3);
         pushButton_7->setObjectName(QString::fromUtf8("pushButton_7"));
         pushButton_7->setGeometry(QRect(640, 280, 121, 51));
+        plainTextEdit_3 = new QPlainTextEdit(tab_3);
+        plainTextEdit_3->setObjectName(QString::fromUtf8("plainTextEdit_3"));
+        plainTextEdit_3->setGeometry(QRect(630, 220, 141, 51));
         tabWidget->addTab(tab_3, QString());
         tab_4 = new QWidget();
         tab_4->setObjectName(QString::fromUtf8("tab_4"));
@@ -175,6 +180,9 @@ public:
         lineEdit_10 = new QLineEdit(tab_4);
         lineEdit_10->setObjectName(QString::fromUtf8("lineEdit_10"));
         lineEdit_10->setGeometry(QRect(280, 230, 261, 41));
+        plainTextEdit_4 = new QPlainTextEdit(tab_4);
+        plainTextEdit_4->setObjectName(QString::fromUtf8("plainTextEdit_4"));
+        plainTextEdit_4->setGeometry(QRect(630, 220, 141, 51));
         tabWidget->addTab(tab_4, QString());
         tab = new QWidget();
         tab->setObjectName(QString::fromUtf8("tab"));
@@ -210,7 +218,7 @@ public:
 
         retranslateUi(user);
 
-        tabWidget->setCurrentIndex(1);
+        tabWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(user);
@@ -219,10 +227,10 @@ public:
     void retranslateUi(QMainWindow *user)
     {
         user->setWindowTitle(QCoreApplication::translate("user", "\351\243\236\346\234\272\347\245\250\347\256\241\347\220\206\347\263\273\347\273\237", nullptr));
-        pushButton->setText(QCoreApplication::translate("user", "\350\256\242\347\245\250", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("user", "\351\200\200\347\245\250", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("user", "\346\237\245\350\257\242", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("user", "\350\277\224\345\233\236", nullptr));
+        bookT->setText(QCoreApplication::translate("user", "\350\256\242\347\245\250", nullptr));
+        refundT->setText(QCoreApplication::translate("user", "\351\200\200\347\245\250", nullptr));
+        checkT->setText(QCoreApplication::translate("user", "\346\237\245\350\257\242", nullptr));
+        backChoose->setText(QCoreApplication::translate("user", "\350\277\224\345\233\236", nullptr));
         label->setText(QCoreApplication::translate("user", "\345\247\223\345\220\215 :", nullptr));
         label_2->setText(QCoreApplication::translate("user", "ID :", nullptr));
         label_3->setText(QCoreApplication::translate("user", "\350\210\252\347\217\255\345\217\267 :", nullptr));
